@@ -1,14 +1,59 @@
 <!--
     =====================================
     generator=datazen
-    version=3.1.3
-    hash=5f059354413af7c35b059c1ce5bee710
+    version=3.2.1
+    hash=ba4f564932c4581214d1f1d7259f3d4d
     =====================================
 -->
 
-# yambs-sample3 ([0.1.0](https://github.com/vkottler/yambs-sample3/releases/tag/0.1.0))
+# yambs-sample3 ([0.1.1](https://github.com/libre-embedded/yambs-sample3/releases/tag/0.1.1))
 
-[![codecov](https://codecov.io/gh/vkottler/yambs-sample3/branch/master/graph/badge.svg)](https://codecov.io/gh/vkottler/yambs-sample3)
-![Build Status](https://github.com/vkottler/yambs-sample3/actions/workflows/yambs-project.yml/badge.svg)
+[![codecov](https://codecov.io/gh/libre-embedded/yambs-sample3/branch/master/graph/badge.svg)](https://codecov.io/gh/libre-embedded/yambs-sample3)
+![Build Status](https://github.com/libre-embedded/yambs-sample3/actions/workflows/yambs-project.yml/badge.svg)
 
 *A sample project for testing.*
+
+## Documentation
+
+### Generated
+
+* By [sphinx+breathe+exhale](https://vkottler.github.io/cpp/sphinx/yambs-sample3/)
+(What's [sphinx](https://www.sphinx-doc.org/en/master/) /
+[breathe](https://breathe.readthedocs.io/en/latest/) /
+[exhale](https://exhale.readthedocs.io/en/latest/)?)
+
+## Workflow
+
+Install [vmklib](https://github.com/libre-embedded/vmklib) such that you can
+`mk --version` (a `pip install vmklib` to your desired Python environment is
+all that's needed).
+
+From a fresh checkout:
+
+```
+git submodule update --init
+mk dz-sync
+mk g
+```
+
+This should result in fully compiled code that you can now use or add to.
+
+
+### Generating Interfaces
+
+Structs and enumerations can be defined for
+[ifgen](https://github.com/libre-embedded/ifgen) which can then generate C++ source
+code into the project.
+
+Generating configurations based on an
+[SVD](https://github.com/libre-embedded/ifgen/tree/master/ifgen/data/svd) file:
+
+```
+mk ifgen-svd-XMC4700
+```
+
+Generating code from an `ifgen.yaml` in the root directory of the project:
+
+```
+mk ifgen
+```
