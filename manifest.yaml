@@ -1,6 +1,9 @@
 ---
 default_target: groups-all
 
+params:
+  slug: yambs_sample3
+
 includes:
   - config/includes/license.yaml
   - config/includes/funding.yaml
