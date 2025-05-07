@@ -1,20 +1,20 @@
 # =====================================
 # generator=datazen
-# version=3.2.1
-# hash=3d4a2848d96f648ebde31c3aa839b000
+# version=3.2.3
+# hash=f65d92491ea308dc971d2f043e598871
 # =====================================
 ---
 project:
   name: yambs-sample3
 
   github: {owner: &self libre-embedded}
-  version: {major: 0, minor: 1, patch: 1}
+  version: {major: 0, minor: 1, patch: 2}
 variants:
   clang:
-    suffix: &clang_version "-18"
+    suffix: &clang_version "-19"
 
   debug:
-    suffix: &gcc_version "-13"
+    suffix: &gcc_version "-14"
   opt:
     suffix: *gcc_version
 
