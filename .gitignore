@@ -8,12 +8,12 @@ venv*
 .*cache
 *-out
 __pycache__
-tasks
 tags
 dev_requirements.txt
 mklocal
 site.env
 dist
 third-party
-src/apps/generated
-src/generated
+tasks/conf.py
+tasks/mklocal
+/toolchains
